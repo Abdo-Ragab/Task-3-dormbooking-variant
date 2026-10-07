@@ -15,7 +15,7 @@ export default function BookingForm() {
     async function load() {
       try {
         const res = await api.get('/bookings/' + id)
-        const b = res.data
+        const b = res.data.booking
         setForm({
           roomNumber: b.roomNumber,
           startDate: b.startDate?.split('T')[0] || '',
